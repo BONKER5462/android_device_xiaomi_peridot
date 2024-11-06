@@ -11,3 +11,18 @@ ro.media.xml_variant.profiles=_cliffs_v0
 
 # LMK
 ro.config.low_ram=false
+
+# Logging
+persist.vendor.camera.logInfoMask=false
+persist.log.tag.ACDB-LOADER=S
+persist.log.tag.CVP=S
+persist.log.tag.ResourcesCompat=S
+persist.log.tag.SYNX-UMD=S
+
+# Feature flags
+persist.sys.fflag.override.settings_enable_monitor_phantom_procs=false
+
+# QTI Mem Optimisation
+persist.vendor.sys.memplus.enable=false
+ro.vendor.qti.sys.fw.bg_apps_limit=30
+ro.vendor.qti.sys.fw.bservice_limit=60
