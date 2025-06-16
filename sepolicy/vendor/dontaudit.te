@@ -2,6 +2,9 @@
 # Apps must use ASharedMemory NDK API. Native code must use libcutils API.
 dontaudit untrusted_app ashmem_device:chr_file open;
 
+# SurfaceFlinger
+dontaudit surfaceflinger vendor_file:file read;
+
 # Camera hal
 dontaudit {
   hal_camera_default
