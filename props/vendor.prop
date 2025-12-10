@@ -169,6 +169,13 @@ vendor.netflix.bsp_rev=Q8635-38577-1
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
+vendor.display.perf_hint_window=50
+ro.vendor.perf.scroll_opt=0
+
+# HWUI
+debug.hwui.use_hint_manager=true
+debug.sf.enable_adpf_cpu_hint=true
+debug.hwui.target_cpu_time_percent=40
 
 # QCOM
 ro.soc.manufacturer=QTI
