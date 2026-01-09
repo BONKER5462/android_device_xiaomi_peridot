@@ -240,19 +240,7 @@ PRODUCT_COPY_FILES += \
 
 # Keymint
 PRODUCT_PACKAGES += \
-    android.hardware.authsecret-service.nxp \
-    android.hardware.security.keymint3-service.strongbox.nxp \
-    android.hardware.weaver-service.nxp
-
-PRODUCT_PACKAGES += \
-    android.hardware.hardware_keystore_V3.xml
-
-PRODUCT_SOONG_NAMESPACES += \
-    hardware/nxp/keymint/generic \
-    hardware/nxp/weaver/generic
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/hal_uuid_map.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hal_uuid_map_peridot.xml
+    android.hardware.authsecret-service@1.0-service
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml \
@@ -261,16 +249,6 @@ PRODUCT_COPY_FILES += \
 # KProfiles
 PRODUCT_PACKAGES += \
     KProfiles
-
-# Lineage Health
-PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
-
-$(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,false)
-$(call soong_config_set,lineage_health,fast_charge_node,/sys/class/qcom-battery/fastcharge_enable)
-$(call soong_config_set,lineage_health,fast_charge_value_none,0)
-$(call soong_config_set,lineage_health,fast_charge_value_fast_charge,1)
-$(call soong_config_set,lineage_health,fast_charge_value_super_fast_charge,2)
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -349,7 +327,14 @@ PRODUCT_PACKAGES += \
     libqti-perfd-client
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+    vendor/qcom/opensource/power/config/pineapple/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
+
+# Platform
+TARGET_BOARD_PLATFORM := pineapple
+
+# QMI
+PRODUCT_PACKAGES += \
+    libvndfwk_detect_jni.qti_vendor # Needed by CNE app
 
 # QSPA
 PRODUCT_PACKAGES += \
@@ -399,30 +384,12 @@ PRODUCT_COPY_FILES += \
 
 # Telephony
 PRODUCT_PACKAGES += \
-    extphonelib \
-    extphonelib-product \
-    extphonelib.xml \
-    extphonelib_product.xml \
-    ims-ext-common \
-    ims_ext_common.xml \
-    qti-telephony-hidl-wrapper \
-    qti-telephony-hidl-wrapper-prd \
-    qti_telephony_hidl_wrapper.xml \
-    qti_telephony_hidl_wrapper_prd.xml \
-    qti-telephony-utils \
-    qti-telephony-utils-prd \
-    qti_telephony_utils.xml \
-    qti_telephony_utils_prd.xml \
-    telephony-ext
-
-PRODUCT_PACKAGES += \
     qcrilNrDb_vendor
 
 PRODUCT_PACKAGES += \
     xiaomi-telephony-stub
 
 PRODUCT_BOOT_JARS += \
-    telephony-ext \
     xiaomi-telephony-stub
 
 PRODUCT_COPY_FILES += \

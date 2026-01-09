@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2024 The LineageOS Project
+# Copyright (C) 2024 The yaapOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -8,14 +8,13 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common PixelOS stuff.
-$(call inherit-product, vendor/voltage/config/common_full_phone.mk)
-TARGET_SCREEN_WIDTH := 1080
+# Inherit some common yaap stuff.
+$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
 
 # Inherit from peridot device
 $(call inherit-product, device/xiaomi/peridot/device.mk)
 
-PRODUCT_NAME := volatge_peridot
+PRODUCT_NAME := yaap_peridot
 PRODUCT_DEVICE := peridot
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
@@ -31,3 +30,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceProduct=$(PRODUCT_SYSTEM_NAME)
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+TARGET_ENABLE_BLUR := true
+TARGET_BUILD_GAPPS := true

@@ -57,6 +57,9 @@ TARGET_PROVIDES_LIBAR_PAL := true
 TARGET_BOOTLOADER_BOARD_NAME := peridot
 TARGET_NO_BOOTLOADER := true
 
+# Add bootctrl to PRODUCT_SOONG_NAMESPACES
+PRODUCT_SOONG_NAMESPACES += hardware/qcom-caf/bootctrl
+
 # Display
 TARGET_SCREEN_DENSITY := 480
 
@@ -68,8 +71,9 @@ BOARD_USES_QCOM_HARDWARE := true
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    $(DEVICE_PATH)/configs/hidl/compatibility_matrix.device.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml
+    vendor/yaap/config/device_framework_matrix.xml
 
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/configs/hidl/framework_manifest.xml
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
@@ -108,9 +112,9 @@ TARGET_KERNEL_CONFIG := \
     vendor/peridot_GKI.config
 
 BOARD_KERNEL_CMDLINE := \
-    sysctl.kernel.firmware_config.force_sysfs_fallback=1 \
-    swinfo.fingerprint=peridot:$(VOLTAGE_VERSION) \
-    mtdoops.fingerprint=peridot:$(VOLTAGE_VERSION)
+    video=vfb:640x400,bpp=32,memsize=3072000 \
+    swinfo.fingerprint=peridot:$(YAAP_VERSION) \
+    mtdoops.fingerprint=peridot:$(YAAP_VERSION)
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
@@ -170,7 +174,7 @@ TARGET_KERNEL_EXT_MODULES := \
     nxp/opensource/driver
 
 # Partitions
--include vendor/voltage/config/BoardConfigReservedSize.mk
+#-include vendor/lineage/config/BoardConfigReservedSize.mk
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
@@ -205,6 +209,7 @@ TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 
 # Platform
 TARGET_BOARD_PLATFORM := pineapple
+TARGET_KERNEL_ADDITIONAL_FLAGS += TARGET_BOARD_PLATFORM=$(TARGET_BOARD_PLATFORM)
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/props/odm.prop
