@@ -145,6 +145,7 @@ debug.sf.late.sf.duration.240=6208332
 debug.sf.late.sf.duration.60=15666666
 debug.sf.late.sf.duration.90=15111111
 debug.sf.late.sf.duration=10500000
+debug.sf.defer_refresh_rate_when_off=1
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.treat_170m_as_sRGB=1
 debug.sf.use_phase_offsets_as_durations=1
