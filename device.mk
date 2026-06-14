@@ -157,6 +157,10 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
     duck_rkp
 
+# DSP
+PRODUCT_PACKAGES += \
+    DSPVolumeSynchronizer
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
