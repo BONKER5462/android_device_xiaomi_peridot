@@ -154,6 +154,14 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
     duck_rkp
 
+# DSP
+PRODUCT_PACKAGES += \
+    DSPVolumeSynchronizer
+
+# Fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Fingerprint
 $(call soong_config_set,XIAOMI_BIOMETRICS_FINGERPRINT,IMPL_VER,V2)
 PRODUCT_PACKAGES += \
