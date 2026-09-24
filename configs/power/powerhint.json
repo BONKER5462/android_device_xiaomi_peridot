@@ -278,6 +278,7 @@
         "10000",
         "58"
       ],
+      "DefaultIndex": 1,
       "ResetOnInit": true
     },
     {
@@ -413,19 +414,19 @@
       "PowerHint": "INTERACTION",
       "Node": "CPUBigPlusClusterMinFreq",
       "Duration": 600,
-      "Value": "2918400"
+      "Value": "2304000"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPULittleClusterMinFreq",
       "Duration": 600,
-      "Value": "1708800"
+      "Value": "1593600"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPUBigClusterMinFreq",
       "Duration": 600,
-      "Value": "9999999"
+      "Value": "2361600"
     },
     {
       "PowerHint": "INTERACTION",
@@ -611,7 +612,7 @@
       "PowerHint": "FIXED_PERFORMANCE",
       "Node": "CPUBigPlusClusterMinFreq",
       "Duration": 0,
-      "Value": "1900800"
+      "Value": "2304000"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
@@ -623,31 +624,37 @@
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUMinFreq",
       "Duration": 0,
-      "Value": "684000000"
+      "Value": "500000000"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "CPUBigClusterMinFreq",
       "Duration": 0,
-      "Value": "1920000"
+      "Value": "2361600"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "CPUBigPlusClusterMinFreq",
       "Duration": 0,
-      "Value": "2150400"
+      "Value": "2304000"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "CPULittleClusterMinFreq",
       "Duration": 0,
-      "Value": "1344000"
+      "Value": "1593600"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "L3MinFreq",
       "Duration": 0,
       "Value": "1344000"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "CPUBWMinFreq",
+      "Duration": 0,
+      "Value": "2092000"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
@@ -688,7 +695,7 @@
       "PowerHint": "DISPLAY_UPDATE_IMMINENT",
       "Node": "CPUBigClusterMinFreq",
       "Duration": 80,
-      "Value": "1824000"
+      "Value": "2073600"
     },
     {
       "PowerHint": "DISPLAY_UPDATE_IMMINENT",
@@ -712,7 +719,7 @@
       "PowerHint": "DISPLAY_UPDATE_IMMINENT",
       "Node": "GPUMinFreq",
       "Duration": 80,
-      "Value": "684000000"
+      "Value": "500000000"
     },
     {
       "PowerHint": "DISPLAY_UPDATE_IMMINENT",
