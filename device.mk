@@ -19,9 +19,6 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # pKVM
 $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk)
 
-# FastCharge
-$(call inherit-product, packages/apps/FastCharge/fastcharge.mk)
-
 # Qualcomm
 $(call soong_config_set,rfs,mpss_firmware_symlink_target,modem_firmware)
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
