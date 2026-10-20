@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/custom_peridot.mk
+    $(LOCAL_DIR)/halcyon_peridot.mk
