@@ -342,7 +342,7 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/lineage/interfaces/power-libperfmgr \
+    hardware/bliss/interfaces/power-libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client \
     hardware/xiaomi \
     vendor/qcom/opensource/usb/etc
@@ -480,3 +480,8 @@ PRODUCT_COPY_FILES += \
 
 # Vendor
 $(call inherit-product, vendor/xiaomi/peridot/peridot-vendor.mk)
+
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += device/xiaomi/peridot/framework_compatibility_matrix.xml
+
+# NotGameTurbo
+$(call inherit-product, packages/apps/NotGameTurbo/notgameturbo.mk)
