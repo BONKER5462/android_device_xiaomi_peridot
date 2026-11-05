@@ -26,3 +26,6 @@ bluetooth.profile.vcp.controller.enabled=false
 
 # Media
 media.stagefright.audio.deep=true
+
+# maintainer
+ro.lunaris.maintainer=•Ᏸᴏ𝗻𝐤ԑ𝐫•ʷBͣᶰa
