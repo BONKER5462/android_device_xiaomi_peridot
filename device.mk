@@ -146,7 +146,8 @@ $(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm-service.clearkey
+    android.hardware.drm-service.clearkey \
+    duck_rkp
 
 # Fastbootd
 PRODUCT_PACKAGES += \
