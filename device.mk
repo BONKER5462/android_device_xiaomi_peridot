@@ -143,7 +143,8 @@ $(foreach display_id, 4630947195234848131 4630947033261136259 463094654558005517
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm-service.clearkey
+    android.hardware.drm-service.clearkey \
+    duck_rkp
 
 # Fingerprint
 $(call soong_config_set,XIAOMI_BIOMETRICS_FINGERPRINT,IMPL_VER,V2)
