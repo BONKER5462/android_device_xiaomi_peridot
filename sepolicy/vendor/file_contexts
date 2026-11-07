@@ -95,3 +95,6 @@
 /dev/xiaomi-touch u:object_r:touchfeature_device:s0
 /sys/devices/virtual/touch/touch_dev/ear_sensor u:object_r:sysfs_tp_virtual_prox:s0
 /sys/devices/virtual/touch/touch_dev/palm_sensor u:object_r:sysfs_tp_virtual_prox:s0
+
+# QSPM
+/vendor/bin/vendor.qti.qspmhal-service    u:object_r:qspmhal_exec:s0
