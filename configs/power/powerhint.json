@@ -710,13 +710,13 @@
     {
       "PowerHint": "FP_BOOST",
       "Node": "CPUBigPlusClusterMaxFreq",
-      "Duration": 3000,
+      "Duration": 5000,
       "Value": "9999999"
     },
     {
       "PowerHint": "FP_BOOST",
       "Node": "CPUBigPlusClusterMinFreq",
-      "Duration": 3000,
+      "Duration": 5000,
       "Value": "9999999"
     },
     {
