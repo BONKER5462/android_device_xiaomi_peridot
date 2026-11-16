@@ -9,22 +9,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Evox stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-TARGET_SCREEN_WIDTH := 1080
+$(call inherit-product, vendor/rr/config/common_full_phone.mk)
 
 # Inherit from peridot device
 $(call inherit-product, device/xiaomi/peridot/device.mk)
 
-PRODUCT_NAME := lineage_peridot
+PRODUCT_NAME := rr_peridot
 PRODUCT_DEVICE := peridot
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := 24069PC21G
 
-# Evox flags
-BUILD_BCR := false
-TARGET_HAS_UDFPS := true
-TARGET_DISABLE_EPPE := true
+RR_MAINTAINER := •Ᏸᴏ𝗻𝐤ԑ𝐫•ʷBͣᶰa
+WITH_GMS := true
 
 PRODUCT_SYSTEM_NAME := peridot_global
 PRODUCT_SYSTEM_DEVICE := peridot
