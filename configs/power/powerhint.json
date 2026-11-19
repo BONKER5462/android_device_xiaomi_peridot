@@ -812,6 +812,36 @@
       "Duration": 0,
       "Value": "2092000"
     },
+    { 
+      "PowerHint": "EXPENSIVE_RENDERING", 
+      "Node": "UclampTALatency", 
+      "Duration": 0, 
+      "Value": "1" 
+    },
+    { 
+      "PowerHint": "EXPENSIVE_RENDERING", 
+      "Node": "SchedMinTaskUtilForBoost", 
+      "Duration": 0, 
+      "Value": "15" 
+    },
+    { 
+      "PowerHint": "EXPENSIVE_RENDERING", 
+      "Node": "SchedMinTaskUtilForColoc", 
+      "Duration": 0, 
+      "Value": "15" 
+    },
+    { 
+      "PowerHint": "EXPENSIVE_RENDERING", 
+      "Node": "SchedMinTaskUtilForUclamp", 
+      "Duration": 0, 
+      "Value": "20" 
+    },
+    { 
+      "PowerHint": "EXPENSIVE_RENDERING", 
+      "Node": "PMQoSCpuDmaLatency", 
+      "Duration": 0, 
+      "Value": "67" 
+    },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "LLCCBWMinFreq",
