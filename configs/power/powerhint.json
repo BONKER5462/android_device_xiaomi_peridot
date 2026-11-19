@@ -836,12 +836,6 @@
       "Duration": 0, 
       "Value": "20" 
     },
-    { 
-      "PowerHint": "EXPENSIVE_RENDERING", 
-      "Node": "PMQoSCpuDmaLatency", 
-      "Duration": 0, 
-      "Value": "67" 
-    },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "LLCCBWMinFreq",
