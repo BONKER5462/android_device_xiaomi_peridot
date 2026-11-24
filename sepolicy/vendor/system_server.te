@@ -10,6 +10,10 @@ allow system_server {
 
 allow system_server mediaserver_tmpfs:file write;
 
+# Zram mm_stat access for CachedAppOptimizer
+allow system_server sysfs_devices_block:dir search;
+allow system_server sysfs_devices_block:file { getattr open read };
+
 # Suppress non-critical vendor file reads
 dontaudit system_server vendor_file:file read;
 dontaudit system_server hal_graphics_allocator_default_exec:file read;
