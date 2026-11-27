@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2024 The LineageOS Project
+# Copyright (C) 2024 The voltageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -123,8 +123,8 @@ TARGET_KERNEL_CONFIG := \
 
 BOARD_KERNEL_CMDLINE := \
     sysctl.kernel.firmware_config.force_sysfs_fallback=1 \
-    swinfo.fingerprint=peridot:$(LINEAGE_VERSION) \
-    mtdoops.fingerprint=peridot:$(LINEAGE_VERSION)
+    swinfo.fingerprint=peridot:$(VOLTAGE_VERSION) \
+    mtdoops.fingerprint=peridot:$(VOLTAGE_VERSION)
 
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
 
@@ -241,7 +241,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Sepolicy
-include device/lineage/sepolicy/libperfmgr/sepolicy.mk
+include device/voltage/sepolicy/libperfmgr/sepolicy.mk
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 include $(DEVICE_PATH)/sepolicy/SEPolicy-diag.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
